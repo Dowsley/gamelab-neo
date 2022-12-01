@@ -27,7 +27,7 @@ margin_left = -257.0
 margin_top = -360.0
 margin_right = 257.0
 margin_bottom = -190.0
-text = "My First Godot Game"
+text = "Neo Sertão"
 
 [node name="Menu" type="VBoxContainer" parent="."]
 anchor_left = 0.5

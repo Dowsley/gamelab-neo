@@ -1,7 +1,32 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://src/Objects/Portal2D.gd" type="Script" id=1]
 [ext_resource path="res://assets/portal.png" type="Texture" id=2]
+
+[sub_resource type="GDScript" id=4]
+script/source = "tool
+extends Area2D
+
+
+onready var anim_player: AnimationPlayer = $AnimationPlayer
+
+export var next_scene: PackedScene
+
+
+func _on_body_entered(body: PhysicsBody2D):
+	teleport()
+
+
+func _get_configuration_warning() -> String:
+	return \"The property Next Level can't be empty\" if not next_scene else \"\"
+
+
+func teleport() -> void:
+	get_tree().paused = true
+	anim_player.play(\"fade_out\")
+	yield(anim_player, \"animation_finished\")
+	get_tree().paused = false
+	get_tree().change_scene_to(next_scene)
+"
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 83.0
@@ -42,7 +67,7 @@ tracks/0/keys = {
 pause_mode = 2
 monitorable = false
 collision_layer = 0
-script = ExtResource( 1 )
+script = SubResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.6 )
@@ -66,4 +91,5 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 mouse_filter = 2
 color = Color( 0, 0, 0, 0 )
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
