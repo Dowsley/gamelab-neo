@@ -52,7 +52,7 @@ margin_bottom = 135.0
 margin_top = 91.0
 margin_right = 274.0
 margin_bottom = 178.0
-text = "Back to Main Screen"
+text = "Voltar para o menu"
 next_scene_path = "res://src/Screens/MainScreen.tscn"
 
 [node name="QuitButton" parent="PauseOverlay/PauseMenu" instance=ExtResource( 6 )]

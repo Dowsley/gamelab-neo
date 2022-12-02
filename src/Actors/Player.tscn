@@ -1,10 +1,63 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/Actors/Player.gd" type="Script" id=1]
-[ext_resource path="res://assets/player.png" type="Texture" id=2]
+[ext_resource path="res://assets/sertao/Chroma-Noir-8x8/Heros.png" type="Texture" id=3]
 
-[sub_resource type="OccluderPolygon2D" id=1]
-polygon = PoolVector2Array( -47.7193, -80.1353, -45.552, -86.1556, -40.2541, -93.1392, -32.7889, -96.9922, 32.4715, -96.5106, 38.7327, -94.5841, 44.9938, -89.0453, 47.6427, -82.0618, 48.1244, -17.5238, 45.957, -10.2994, 41.6224, -5.00154, 33.9164, 0.296349, -31.1032, -0.18528, -39.5316, -4.2791, -45.0704, -10.0586, -47.4785, -16.5606 )
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 3 )
+region = Rect2( 48, 352, 16, 8 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 3 )
+region = Rect2( 24, 352, 16, 8 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 3 )
+region = Rect2( 48, 376, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 3 )
+region = Rect2( 56, 376, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 3 )
+region = Rect2( 48, 344, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=38]
+atlas = ExtResource( 3 )
+region = Rect2( 48, 336, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 3 )
+region = Rect2( 56, 336, 8, 8 )
+
+[sub_resource type="SpriteFrames" id=43]
+animations = [ {
+"frames": [ SubResource( 40 ) ],
+"loop": true,
+"name": "attack_facao",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 41 ) ],
+"loop": true,
+"name": "attack_rifle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 47 ), SubResource( 36 ) ],
+"loop": true,
+"name": "idle",
+"speed": 2.0
+}, {
+"frames": [ SubResource( 37 ) ],
+"loop": false,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 38 ), SubResource( 39 ) ],
+"loop": true,
+"name": "walk",
+"speed": 7.0
+} ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 40, 41 )
@@ -33,12 +86,13 @@ drag_margin_right = 0.0
 editor_draw_limits = true
 editor_draw_drag_margin = true
 
-[node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 2 )
-offset = Vector2( 0, -48.3333 )
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite"]
-occluder = SubResource( 1 )
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -35, -73 )
+scale = Vector2( 9, 9 )
+frames = SubResource( 43 )
+animation = "idle"
+playing = true
+centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -41 )
@@ -59,5 +113,6 @@ collision_mask = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StompDetector"]
 modulate = Color( 0.337255, 0.223529, 1, 1 )
 shape = SubResource( 4 )
+
 [connection signal="body_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_body_entered"]
 [connection signal="area_entered" from="StompDetector" to="." method="_on_StompDetector_area_entered"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://assets/portal.png" type="Texture" id=2]
+[ext_resource path="res://assets/sertao/Chroma-Noir-8x8/Interactables.png" type="Texture" id=1]
 
 [sub_resource type="GDScript" id=4]
 script/source = "tool
@@ -29,8 +29,8 @@ func teleport() -> void:
 "
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 83.0
-height = 93.4486
+radius = 68.0
+height = 60.0
 
 [sub_resource type="Animation" id=2]
 resource_name = "START"
@@ -65,17 +65,21 @@ tracks/0/keys = {
 
 [node name="Portal2D" type="Area2D"]
 pause_mode = 2
-monitorable = false
 collision_layer = 0
+monitorable = false
 script = SubResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.6 )
-position = Vector2( 0, -130 )
-texture = ExtResource( 2 )
+position = Vector2( 0, -63 )
+scale = Vector2( 12, 12 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 317, 16, 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -130 )
+position = Vector2( -2, -62 )
+rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

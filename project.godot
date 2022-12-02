@@ -20,9 +20,9 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Your First Game: 2d Platformer"
+config/name="supert-lampiao-bros"
 run/main_scene="res://src/Screens/MainScreen.tscn"
-config/icon="res://icon.png"
+config/icon="res://assets/sertao/Chroma-Noir-8x8/sun.png"
 
 [autoload]
 
@@ -76,6 +76,8 @@ pause={
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 2d/snapping/use_gpu_pixel_snap=true
+environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"
 quality/2d/use_pixel_snap=true

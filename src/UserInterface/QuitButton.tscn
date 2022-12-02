@@ -2,13 +2,12 @@
 
 [ext_resource path="res://src/UserInterface/QuitButton.gd" type="Script" id=1]
 
-
-
 [node name="QuitButton" type="Button"]
 margin_right = 230.0
 margin_bottom = 40.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Quit"
+text = "Sair"
 script = ExtResource( 1 )
+
 [connection signal="button_up" from="." to="." method="_on_button_up"]

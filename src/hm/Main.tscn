@@ -10,19 +10,19 @@
 [ext_resource path="res://src/hm/ParallaxBackground.gd" type="Script" id=8]
 [ext_resource path="res://src/hm/Main.gd" type="Script" id=9]
 
-[sub_resource type="ConvexPolygonShape2D" id=42]
+[sub_resource type="ConvexPolygonShape2D" id=48]
 points = PoolVector2Array( 8, 3, 0, 3, 0, 1, 8, 1 )
 
-[sub_resource type="ConvexPolygonShape2D" id=43]
+[sub_resource type="ConvexPolygonShape2D" id=49]
 points = PoolVector2Array( 4, 8, 0, 8, 0, 0, 4, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=44]
+[sub_resource type="ConvexPolygonShape2D" id=50]
 points = PoolVector2Array( 8, 8, 4, 8, 4, 0, 8, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=45]
+[sub_resource type="ConvexPolygonShape2D" id=51]
 points = PoolVector2Array( 0, 1, 8, 1, 8, 3, 4, 3, 4, 8, 0, 8, 0, 1 )
 
-[sub_resource type="ConvexPolygonShape2D" id=46]
+[sub_resource type="ConvexPolygonShape2D" id=52]
 points = PoolVector2Array( 0, 2, 0, 1, 8, 1, 8, 8, 4, 8, 4, 3, 0, 3, 0, 1 )
 
 [sub_resource type="TileSet" id=1]
@@ -36,14 +36,14 @@ points = PoolVector2Array( 0, 2, 0, 1, 8, 1, 8, 8, 4, 8, 4, 3, 0, 3, 0, 1 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 42 )
+0/shape = SubResource( 48 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 42 ),
+"shape": SubResource( 48 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
@@ -57,14 +57,14 @@ points = PoolVector2Array( 0, 2, 0, 1, 8, 1, 8, 8, 4, 8, 4, 3, 0, 3, 0, 1 )
 1/navigation_offset = Vector2( 0, 0 )
 1/shape_offset = Vector2( 0, 0 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 43 )
+1/shape = SubResource( 49 )
 1/shape_one_way = false
 1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 43 ),
+"shape": SubResource( 49 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 1/z_index = 0
@@ -78,14 +78,14 @@ points = PoolVector2Array( 0, 2, 0, 1, 8, 1, 8, 8, 4, 8, 4, 3, 0, 3, 0, 1 )
 2/navigation_offset = Vector2( 0, 0 )
 2/shape_offset = Vector2( 0, 0 )
 2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape = SubResource( 44 )
+2/shape = SubResource( 50 )
 2/shape_one_way = false
 2/shape_one_way_margin = 1.0
 2/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 44 ),
+"shape": SubResource( 50 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 2/z_index = 0
@@ -127,14 +127,14 @@ points = PoolVector2Array( 0, 2, 0, 1, 8, 1, 8, 8, 4, 8, 4, 3, 0, 3, 0, 1 )
 5/navigation_offset = Vector2( 0, 0 )
 5/shape_offset = Vector2( 0, 0 )
 5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape = SubResource( 45 )
+5/shape = SubResource( 51 )
 5/shape_one_way = false
 5/shape_one_way_margin = 1.0
 5/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 45 ),
+"shape": SubResource( 51 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 5/z_index = 0
@@ -148,14 +148,14 @@ points = PoolVector2Array( 0, 2, 0, 1, 8, 1, 8, 8, 4, 8, 4, 3, 0, 3, 0, 1 )
 6/navigation_offset = Vector2( 0, 0 )
 6/shape_offset = Vector2( 0, 0 )
 6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-6/shape = SubResource( 46 )
+6/shape = SubResource( 52 )
 6/shape_one_way = false
 6/shape_one_way_margin = 1.0
 6/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 46 ),
+"shape": SubResource( 52 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 6/z_index = 0
@@ -1295,7 +1295,7 @@ tile_data = PoolIntArray( 196625, 10, 0, 327696, 50, 0, 393225, 15, 0, 393229, 5
 position = Vector2( 32, 64 )
 frames = SubResource( 6 )
 animation = "1"
-frame = 1
+frame = 2
 playing = true
 centered = false
 
@@ -1303,6 +1303,7 @@ centered = false
 position = Vector2( 112, 40 )
 frames = SubResource( 6 )
 animation = "3"
+frame = 1
 playing = true
 centered = false
 
@@ -1310,7 +1311,7 @@ centered = false
 position = Vector2( 80, 64 )
 frames = SubResource( 6 )
 animation = "4"
-frame = 1
+frame = 2
 playing = true
 centered = false
 
@@ -1318,7 +1319,6 @@ centered = false
 position = Vector2( 152, 40 )
 frames = SubResource( 6 )
 animation = "5"
-frame = 2
 playing = true
 centered = false
 

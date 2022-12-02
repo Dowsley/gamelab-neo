@@ -15,6 +15,14 @@ func _on_EnemyDetector_body_entered(body: PhysicsBody2D) -> void:
 func _physics_process(delta: float) -> void:
 	var is_jump_interrupted: = Input.is_action_just_released("jump") and _velocity.y < 0.0
 	var direction: = get_direction()
+	if not is_on_floor():
+		$AnimatedSprite.play("jump")
+	else:
+		if direction.x == 0:
+			$AnimatedSprite.play("idle")
+		else:
+			$AnimatedSprite.play("walk")
+	$AnimatedSprite.flip_h = not direction.x > 0
 	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)
 	var snap: Vector2 = Vector2.DOWN * 60.0 if direction.y == 0.0 else Vector2.ZERO
 	_velocity = move_and_slide_with_snap(

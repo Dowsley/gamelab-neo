@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/ui_theme.tres" type="Theme" id=1]
-[ext_resource path="res://assets/background.png" type="Texture" id=2]
+[ext_resource path="res://src/Screens/dithered-image (2).png" type="Texture" id=2]
 [ext_resource path="res://src/UserInterface/Title.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/UserInterface/SceneChangeButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/UserInterface/QuitButton.tscn" type="PackedScene" id=5]
@@ -16,7 +16,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 2 )
 expand = true
-stretch_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 729.0
+margin_top = 227.0
+margin_right = 1192.0
+margin_bottom = 303.0
+color = Color( 0, 0, 0, 1 )
 
 [node name="Title" parent="." instance=ExtResource( 3 )]
 anchor_left = 0.5
@@ -27,7 +33,7 @@ margin_left = -257.0
 margin_top = -360.0
 margin_right = 257.0
 margin_bottom = -190.0
-text = "Neo Sertão"
+text = "Super Sertão Bros"
 
 [node name="Menu" type="VBoxContainer" parent="."]
 anchor_left = 0.5
@@ -45,8 +51,8 @@ __meta__ = {
 [node name="PlayButton" parent="Menu" instance=ExtResource( 4 )]
 margin_right = 360.0
 margin_bottom = 73.0
-text = "Play"
-next_scene_path = "res://src/Levels/Level01.tscn"
+text = "Jogar"
+next_scene_path = "res://src/Levels/Level01_new.tscn"
 
 [node name="QuitButton" parent="Menu" instance=ExtResource( 5 )]
 margin_top = 81.0

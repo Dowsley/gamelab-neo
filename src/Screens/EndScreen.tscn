@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/ui_theme.tres" type="Theme" id=1]
 [ext_resource path="res://src/Screens/EndScreen.gd" type="Script" id=2]
-[ext_resource path="res://assets/background.png" type="Texture" id=3]
+[ext_resource path="res://src/Screens/dithered-image (2).png" type="Texture" id=3]
 [ext_resource path="res://src/UserInterface/Title.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/UserInterface/SceneChangeButton.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/UserInterface/QuitButton.tscn" type="PackedScene" id=7]
@@ -12,9 +12,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 1 )
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect" type="TextureRect" parent="."]
 anchor_right = 1.0
@@ -22,14 +19,30 @@ anchor_bottom = 1.0
 texture = ExtResource( 3 )
 expand = true
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 514.0
+margin_top = 94.0
+margin_right = 1413.0
+margin_bottom = 890.0
+color = Color( 0.219608, 0.219608, 0.219608, 1 )
+
 [node name="Title" parent="." instance=ExtResource( 4 )]
-text = "Congratulations you finished the game!"
+text = "Parabéns homi! Você ganhou"
 
 [node name="Result" type="Label" parent="."]
 anchor_right = 1.0
 margin_top = 230.0
 margin_bottom = 400.0
-text = "Your final score is: %s and you died %s times!"
+text = "O score final desse cabra é %s, com %s mortes."
+align = 1
+valign = 1
+
+[node name="Result2" type="Label" parent="."]
+anchor_right = 1.0
+margin_top = 731.0
+margin_bottom = 901.0
+text = "Talvez tenha mais conteúdo no futuro :)
+Fazer jogos sozinho é difícil."
 align = 1
 valign = 1
 
